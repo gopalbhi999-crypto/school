@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admission Enquiry Form | PBRP Academy</title>
+    <title>Teacher Portal | PBRP Academy</title>
     <style>
         * {
             box-sizing: border-box;
@@ -12,293 +12,171 @@
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f1f5f9;
-            color: #0f172a;
-            padding: 40px 20px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
         }
 
-        /* Premium Form Container */
-        .form-container {
-            max-width: 950px;
-            margin: 0 auto;
+        /* Premium Login Box */
+        .login-container {
+            width: 100%;
+            max-width: 420px;
             background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
             overflow: hidden;
-            border-bottom: 5px solid #d4af37;
+            border-top: 5px solid #d4af37;
+            padding: 35px;
         }
 
-        /* Black & Gold Header Banner */
-        .form-header {
-            background-color: #0f172a;
-            color: #ffffff;
+        .login-header {
             text-align: center;
-            padding: 25px;
-            border-bottom: 3px solid #d4af37;
+            margin-bottom: 30px;
         }
-        .form-header h1 {
-            font-size: 28px;
-            font-weight: 700;
-            letter-spacing: 1px;
+        .login-header h2 {
+            font-size: 24px;
+            color: #0f172a;
+            font-weight: 800;
             text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
-        .form-header p {
-            color: #94a3b8;
+        .login-header p {
+            color: #64748b;
             font-size: 14px;
             margin-top: 5px;
         }
 
-        /* Form Layout Body */
-        form {
-            padding: 40px;
+        /* Status Banner for Working */
+        .status-box {
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 15px;
+            margin-bottom: 20px;
+            display: none; /* Controlled by JavaScript */
+        }
+        .status-success {
+            background-color: #dcfce7;
+            color: #15803d;
+            border: 1px solid #bbf7d0;
+        }
+        .status-error {
+            background-color: #fee2e2;
+            color: #b91c1c;
+            border: 1px solid #fecaca;
         }
 
-        /* Table Layout for Fields */
-        .form-table {
-            display: table;
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 25px 15px;
-            margin-top: -15px;
-        }
-        .form-row {
-            display: table-row;
-        }
+        /* Form Inputs */
         .form-group {
-            display: table-cell;
-            width: 50%;
-            vertical-align: top;
+            margin-bottom: 20px;
         }
-
-        /* Full Width row helper */
-        .full-width-row {
-            display: block;
-            padding: 0 25px;
-            margin-bottom: 15px;
-        }
-
-        /* Typography & Inputs Styling */
         label {
             display: block;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
-            color: #334155;
-            margin-bottom: 8px;
+            color: #475569;
+            margin-bottom: 6px;
+            text-transform: uppercase;
         }
-        input[type="text"],
-        input[type="email"],
-        input[type="date"],
-        select,
-        textarea {
+        input[type="tel"],
+        input[type="password"] {
             width: 100%;
             padding: 12px 14px;
             border: 1px solid #cbd5e1;
-            border-radius: 5px;
-            font-size: 14px;
-            color: #0f172a;
-            background-color: #fff;
+            border-radius: 6px;
+            font-size: 15px;
             outline: none;
             transition: all 0.3s ease;
         }
-        input:focus, select:focus, textarea:focus {
+        input:focus {
             border-color: #d4af37;
             box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
         }
 
-        /* Custom File Upload Button Appearance */
-        input[type="file"] {
+        /* Premium Dark Button for Staff */
+        .btn-login {
             width: 100%;
-            padding: 8px 10px;
-            background: #f8fafc;
-            border: 1px dashed #cbd5e1;
-            border-radius: 5px;
-            font-size: 13px;
-        }
-
-        /* Action Buttons */
-        .form-actions {
-            text-align: center;
-            margin-top: 30px;
-            padding: 0 25px;
-        }
-        .btn-submit {
-            background: linear-gradient(135deg, #e11d48 0%, #be123c 100%);
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             color: #ffffff;
-            border: none;
-            padding: 14px 50px;
-            font-size: 16px;
+            border: 1px solid #d4af37;
+            padding: 14px;
+            font-size: 15px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
-            border-radius: 5px;
+            border-radius: 6px;
             cursor: pointer;
-            box-shadow: 0 4px 15px rgba(225, 29, 72, 0.3);
+            box-shadow: 0 4px 15px rgba(15, 23, 42, 0.3);
             transition: all 0.3s ease;
+            margin-top: 10px;
         }
-        .btn-submit:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(225, 29, 72, 0.5);
+        .btn-login:hover {
+            transform: translateY(-1px);
+            background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%);
+            color: #0f172a;
         }
 
-        /* Responsive Layout for Mobile Devices */
-        @media (max-width: 768px) {
-            .form-table, .form-row, .form-group {
-                display: block;
-                width: 100%;
-            }
-            .form-table {
-                border-spacing: 0;
-            }
-            .form-group {
-                margin-bottom: 15px;
-            }
-            form {
-                padding: 20px;
-            }
-            .full-width-row {
-                padding: 0;
-            }
+        .footer-note {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 12px;
+            margin-top: 25px;
         }
     </style>
 </head>
 <body>
 
-    <div class="form-container">
-        <div class="form-header">
-            <h1>Admission Enquiry Form</h1>
-            <p>PBRP Academy Dibiyapur — Nurturing Academic Excellence</p>
+    <div class="login-container">
+        <div class="login-header">
+            <h2>Teacher Portal</h2>
+            <p>PBRP Academy Staff Desk</p>
         </div>
 
-        <form action="#" method="POST" enctype="multipart/form-data">
-            
-            <div class="full-width-row">
-                <label for="school">School</label>
-                <select id="school" name="school" required>
-                    <option value="" selected disabled>Choose School</option>
-                    <option value="pbrp_dibiyapur">PBRP Academy, Dibiyapur Campus</option>
-                </select>
+        <div id="statusBox" class="status-box"></div>
+
+        <form id="loginForm" onsubmit="checkLogin(event)">
+            <div class="form-group">
+                <label for="mobile">Enter Mobile No</label>
+                <input type="tel" id="mobile" placeholder="e.g. 9876543210" required>
             </div>
 
-            <div class="form-table">
-                
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="class">Class to be admitted</label>
-                        <select id="class" name="class" required>
-                            <option value="" selected disabled>Choose Class</option>
-                            <option value="1">Class 1</option>
-                            <option value="2">Class 2</option>
-                            <option value="3">Class 3</option>
-                            <option value="4">Class 4</option>
-                            <option value="5">Class 5</option>
-                            <option value="6">Class 6</option>
-                            <option value="7">Class 7</option>
-                            <option value="8">Class 8</option>
-                            <option value="9">Class 9</option>
-                            <option value="10">Class 10</option>
-                            <option value="11">Class 11</option>
-                            <option value="12">Class 12</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="student_name">Student Name</label>
-                        <input type="text" id="student_name" name="student_name" placeholder="Enter Full Name" required>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="gender">Gender</label>
-                        <select id="gender" name="gender" required>
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                            <option value="Other">Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="dob">Date of Birth</label>
-                        <input type="date" id="dob" name="dob" required>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="father_name">Father's Name</label>
-                        <input type="text" id="father_name" name="father_name" placeholder="Enter Father's Name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="mother_name">Mother's Name</label>
-                        <input type="text" id="mother_name" name="mother_name" placeholder="Enter Mother's Name" required>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="father_mobile">Father's Mobile No</label>
-                        <input type="text" id="father_mobile" name="father_mobile" placeholder="Enter 10-digit number" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="mother_mobile">Mother's Mobile No</label>
-                        <input type="text" id="mother_mobile" name="mother_mobile" placeholder="Enter Mobile number">
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="example@domain.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="address">Address</label>
-                        <input type="text" id="address" name="address" placeholder="Enter Local/Permanent Address" required>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="id_proof">ID Proof</label>
-                        <select id="id_proof" name="id_proof">
-                            <option value="Aadhaar">Aadhaar Card</option>
-                            <option value="Birth Certificate">Birth Certificate</option>
-                            <option value="Other">Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="id_attachment">ID Proof Attachment</label>
-                        <input type="file" id="id_attachment" name="id_attachment">
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="id_number">ID Number</label>
-                        <input type="text" id="id_number" name="id_number" placeholder="Enter Document ID Number">
-                    </div>
-                    <div class="form-group">
-                        <label for="present_school">Present School Name</label>
-                        <input type="text" id="present_school" name="present_school" placeholder="Previous School Name (if applicable)">
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="remark">Remark</label>
-                        <textarea id="remark" name="remark" rows="2" placeholder="Any additional notes..."></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="photo">Photo</label>
-                        <input type="file" id="photo" name="photo" accept="image/*">
-                    </div>
-                </div>
-
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="••••••" required>
             </div>
 
-            <div class="form-actions">
-                <button type="submit" class="btn-submit">Submit Enquiry</button>
-            </div>
-            
+            <button type="submit" class="btn-login">Staff Secure Login</button>
         </form>
+
+        <div class="footer-note">
+            Faculty & Administration Desk &copy; 2026
+        </div>
     </div>
+
+    <script>
+        function checkLogin(event) {
+            event.preventDefault(); // Page reload rokne ke liye
+
+            const mobile = document.getElementById('mobile').value;
+            const password = document.getElementById('password').value;
+            const statusBox = document.getElementById('statusBox');
+
+            // Verification rules
+            if (password === "123456") {
+                statusBox.className = "status-box status-success";
+                statusBox.innerHTML = "🟢 Working...";
+                statusBox.style.display = "block";
+            } else {
+                statusBox.className = "status-box status-error";
+                statusBox.innerHTML = "❌ Invalid Password! Try again.";
+                statusBox.style.display = "block";
+            }
+        }
+    </script>
 
 </body>
 </html>
