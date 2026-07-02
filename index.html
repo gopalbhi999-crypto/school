@@ -30,6 +30,7 @@
         body {
             color: var(--text-color);
             line-height: 1.6;
+            scroll-behavior: smooth; /* Smooth scrolling jab Apply Now dabaaye */
         }
 
         /* --- NAVBAR --- */
@@ -63,15 +64,25 @@
             color: var(--secondary-color);
         }
 
-        /* Navbar Links Turned Into Button Grid/Flex */
         .nav-links {
             list-style: none;
             display: flex;
-            gap: 15px;
+            gap: 20px;
             align-items: center;
         }
 
-        /* Styling for Navbar Buttons */
+        /* Normal Link Style for Admission */
+        .nav-links a.normal-link {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .nav-links a.normal-link:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Button Style for About & Contact */
         .nav-btn {
             text-decoration: none;
             padding: 8px 18px;
@@ -101,18 +112,6 @@
         .btn-nav-filled:hover {
             background-color: #1e3799;
             border-color: #1e3799;
-        }
-
-        .btn-nav-gold {
-            background-color: var(--secondary-color);
-            color: #000;
-            border: 2px solid var(--secondary-color);
-        }
-
-        .btn-nav-gold:hover {
-            background-color: var(--primary-color);
-            color: #fff;
-            border-color: var(--primary-color);
         }
 
         /* --- HERO SECTION --- */
@@ -171,7 +170,7 @@
             font-size: 14px;
         }
 
-        /* --- FACILITIES SECTION --- */
+        /* --- FEATURES SECTION --- */
         .features {
             padding: 80px 5%;
             max-width: 1200px;
@@ -228,93 +227,33 @@
             font-size: 22px;
         }
 
-        /* --- FOOTER --- */
-        footer {
-            background-color: var(--primary-color);
-            color: #fff;
-            text-align: center;
-            padding: 30px 20px;
-            font-size: 14px;
+        /* --- INQUIRY SECTION --- */
+        .light-section {
+            background-color: var(--light-bg);
+            padding: 80px 5%;
         }
 
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                gap: 15px;
-            }
-            .nav-links {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .hero-content h1 {
-                font-size: 32px;
-            }
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
-    </style>
-</head>
-<body>
 
-    <!-- NAVBAR -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <i class="fas fa-graduation-cap"></i> PBRPA
-            </div>
-            <ul class="nav-links">
-                <li><a href="#" class="nav-btn btn-nav-outline">Home</a></li>
-                <li><a href="a.html" class="nav-btn btn-nav-outline">About Us</a></li>
-                <li><a href="b.html" class="nav-btn btn-nav-filled">Contact</a></li>
-                <li><a href="c.html" class="nav-btn btn-nav-gold">Admission 2026-27</a></li>
-            </ul>
-        </nav>
-    </header>
+        .form-group {
+            margin-bottom: 20px;
+        }
 
-    <!-- QUICK NOTICES -->
-    <div class="notice-bar">
-        <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
-            🔥 🚨 Admission Open for Academic Session 2026-2027! Click on 'Admission' button to apply. | 🏆 Pt. BABU RAM PANDEY ACADEMY bags 100% success rate in board exams! 🚨 🔥
-        </marquee>
-    </div>
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+            font-size: 16px;
+        }
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Pt. BABU RAM PANDEY ACADEMY</h1>
-            <p>Nurturing Minds, Shaping Futures. Join us to experience world-class education with rich values and modern techniques.</p>
-            <div class="hero-btns">
-                <!-- Apply Now Button redirection to c.html -->
-                <a href="c.html" class="btn btn-primary">Apply Now</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FACILITIES SECTION -->
-    <section id="facilities" class="features">
-        <h2 class="section-title">Why Choose Us?</h2>
-        <div class="grid">
-            <div class="card">
-                <i class="fas fa-flask"></i>
-                <h3>Modern Labs</h3>
-                <p>Fully equipped Science and Computer labs to promote practical and technical learning.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-book-reader"></i>
-                <h3>Rich Library</h3>
-                <p>A huge collection of books, journals, and digital resources to fuel the curiosity of students.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-running"></i>
-                <h3>Sports & Games</h3>
-                <p>Big playground with professional coaching for cricket, football, basketball, and indoor games.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2026 Pt. BABU RAM PANDEY ACADEMY. All Rights Reserved.</p>
-        <p style="margin-top: 5px; opacity: 0.7; font-size: 12px;">Designed with ❤️ for a bright future.</p>
-    </footer>
-
-</body>
-</html>
+        .form-group input:focus, .form-group textarea:focus {
+            border-colorNormally I can help with things like this, but I don't seem to have access to that content. You can try again or ask me for something else.
