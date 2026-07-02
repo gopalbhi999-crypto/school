@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Helpdesk | PBRP Academy</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f1f5f9;
+            color: #0f172a;
+            padding: 40px 6%;
+        }
+
+        .title-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .title-section h1 {
+            font-size: 36px;
+            font-weight: 800;
+            color: #0f172a;
+        }
+        .title-section h1 span {
+            color: #d4af37;
+        }
+        .title-section p {
+            color: #64748b;
+            margin-top: 10px;
+        }
+
+        /* Category Headings */
+        .category-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 40px 0 20px 0;
+            border-left: 4px solid #d4af37;
+            padding-left: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Flex/Grid Matrix for Clean Layout */
+        .contact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+        .contact-card {
+            flex: 1 1 calc(25% - 30px);
+            min-width: 250px;
+            background: #ffffff;
+            margin: 15px;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border-top: 3px solid #0f172a;
+            transition: transform 0.3s ease, border-color 0.3s;
+        }
+        .contact-card:hover {
+            transform: translateY(-5px);
+            border-top-color: #d4af37;
+        }
+
+        .contact-card h3 {
+            font-size: 18px;
+            color: #1e293b;
+            margin-bottom: 8px;
+        }
+        .contact-card .badge {
+            background-color: #f1f5f9;
+            color: #475569;
+            padding: 3px 10px;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+        .contact-card .phone-link {
+            color: #d4af37;
+            font-weight: 700;
+            text-decoration: none;
+            display: block;
+            font-size: 15px;
+            margin-top: 5px;
+        }
+
+        /* WhatsApp Button Setup */
+        .whatsapp-btn {
+            background-color: #25d366;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-top: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.2);
+            transition: background 0.2s;
+        }
+        .whatsapp-btn:hover {
+            background-color: #1ebd58;
+        }
+
+        @media (max-width: 992px) {
+            .contact-card { flex: 1 1 calc(50% - 30px); }
+        }
+        @media (max-width: 576px) {
+            .contact-card { flex: 1 1 100%; margin: 10px 0; }
+            body { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="title-section">
+        <h1>Official School <span>Contact Desk</span></h1>
+        <p>Connect instantly with our administration, faculty heads, and transit support teams.</p>
+    </div>
+
+    <div class="category-title">Administration & Helpdesk</div>
+    <div class="contact-grid">
+        <div class="contact-card">
+            <span class="badge">Main Campus</span>
+            <h3>Admission Office</h3>
+            <p>For enquiries and documentation</p>
+            <a href="tel:+917900378611" class="phone-link">📞 +91 7900378611</a>
+        </div>
+        <div class="contact-card">
+            <span class="badge">Official Mail</span>
+            <h3>Support Desk</h3>
+            <p>General queries and issues</p>
+            <a href="mailto:pbrpdibiyapur@gmail.com" class="phone-link" style="font-size:13px;">✉️ pbrpdibiyapur@gmail.com</a>
+        </div>
+    </div>
+
+    <div class="category-title">🚌 Transit & Bus Support</div>
+    <div class="contact-grid">
+        <div class="contact-card">
+            <span class="badge">Bus Route No. 09</span>
+            <h3>Transit Driver 09</h3>
+            <p>Route: Sector A Zone</p>
+            <a href="tel:+919999900009" class="phone-link">📞 +91 99999 00009</a>
+        </div>
+        <div class="contact-card">
+            <span class="badge">Bus Route No. 10</span>
+            <h3>Transit Driver 10</h3>
+            <p>Route: Main Highway Line</p>
+            <a href="tel:+919999900010" class="phone-link">📞 +91 99999 00010</a>
+        </div>
+        <div class="contact-card">
+            <span class="badge">Bus Route No. 11</span>
+            <h3>Transit Driver 11</h3>
+            <p>Route: Dibiyapur Town Outer</p>
+            <a href="tel:+919999900011" class="phone-link">📞 +91 99999 00011</a>
+        </div>
+        <div class="contact-card">
+            <span class="badge">Bus Route No. 12</span>
+            <h3>Transit Driver 12</h3>
+            <p>Route: Station Road Area</p>
+            <a href="tel:+919999900012" class="phone-link">📞 +91 99999 00012</a>
+        </div>
+    </div>
+
+    <div class="category-title">🎓 Class Teachers Desk</div>
+    <div class="contact-grid">
+        
+        <div class="contact-card">
+            <span class="badge">Class 9th Teacher</span>
+            <h3>Mr. Alok Kushwaha</h3>
+            <p>Senior Math Faculty</p>
+            <a href="tel:+917900378611" class="phone-link">📞 +91 79003 78611</a>
+            <a href="https://wa.me/917900378611?text=Student%20Name%3A%20%0AClass%3A%20%0ARequest%20to%20join%20in%20school%20group." target="_blank" class="whatsapp-btn">💬 Join WhatsApp Group</a>
+        </div>
+
+        <div class="contact-card">
+            <span class="badge">Class 10th Teacher</span>
+            <h3>Mrs. Pragati Gupta</h3>
+            <p>English Literature Head</p>
+            <a href="tel:+917900378611" class="phone-link">📞 +91 79003 78611</a>
+            <a href="https://wa.me/917900378611?text=Student%20Name%3A%20%0AClass%3A%20%0ARequest%20to%20join%20in%20school%20group." target="_blank" class="whatsapp-btn">💬 Join WhatsApp Group</a>
+        </div>
+
+        <div class="contact-card">
+            <span class="badge">Class 11th Teacher</span>
+            <h3>Mr. S.K. Sharma</h3>
+            <p>Physics Department</p>
+            <a href="tel:+917900378611" class="phone-link">📞 +91 79003 78611</a>
+            <a href="https://wa.me/917900378611?text=Student%20Name%3A%20%0AClass%3A%20%0ARequest%20to%20join%20in%20school%20group." target="_blank" class="whatsapp-btn">💬 Join WhatsApp Group</a>
+        </div>
+
+        <div class="contact-card">
+            <span class="badge">Class 12th Teacher</span>
+            <h3>Mr. R.K. Pandey</h3>
+            <p>Chemistry Specialist</p>
+            <a href="tel:+917900378611" class="phone-link">📞 +91 79003 78611</a>
+            <a href="https://wa.me/917900378611?text=Student%20Name%3A%20%0AClass%3A%20%0ARequest%20to%20join%20in%20school%20group." target="_blank" class="whatsapp-btn">💬 Join WhatsApp Group</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
