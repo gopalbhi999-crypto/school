@@ -3,257 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pt. BABU RAM PANDEY ACADEMY</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <title>Pt. Babu Ram Pandey Academy | Official School Website</title>
     <style>
-        /* --- RESET & BASE STYLES --- */
+        /* Modern & Professional Styling */
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
         }
-        
-        :root {
-            --primary-color: #0c2461;
-            --secondary-color: #f6b93b;
-            --text-color: #333;
-            --light-bg: #f8f9fa;
-            --whatsapp-color: #25D366;
-            --email-color: #EA4335;
-        }
-
         body {
-            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
             line-height: 1.6;
-            scroll-behavior: smooth; /* Smooth scrolling jab Apply Now dabaaye */
         }
-
-        /* --- NAVBAR --- */
+        /* Header & Navigation */
         header {
-            background-color: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background-color: #0f172a;
+            color: #ffffff;
+            padding: 15px 5%;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
         }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 5%;
-            max-width: 1200px;
-            margin: 0 auto;
+        .header-container {
+            display: table;
+            width: 100%;
         }
-
-        .logo {
+        .logo-area {
+            display: table-cell;
+            vertical-align: middle;
             font-size: 24px;
-            font-weight: 700;
-            color: var(--primary-color);
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            font-weight: bold;
+            color: #38bdf8;
         }
-
-        .logo i {
-            color: var(--secondary-color);
-        }
-
         .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-            align-items: center;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: right;
         }
-
-        /* Normal Link Style for Admission */
-        .nav-links a.normal-link {
+        .nav-links a {
+            color: #f1f5f9;
             text-decoration: none;
-            color: var(--primary-color);
-            font-weight: 600;
-            transition: 0.3s;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
         }
-        .nav-links a.normal-link:hover {
-            color: var(--secondary-color);
+        .nav-links a:hover {
+            color: #38bdf8;
         }
-
-        /* Button Style for About & Contact */
-        .nav-btn {
-            text-decoration: none;
-            padding: 8px 18px;
-            font-weight: 600;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-            font-size: 14px;
-            display: inline-block;
-        }
-
-        .btn-nav-outline {
-            border: 2px solid var(--primary-color);
-            color: var(--primary-color);
-        }
-
-        .btn-nav-outline:hover {
-            background-color: var(--primary-color);
-            color: #fff;
-        }
-
-        .btn-nav-filled {
-            background-color: var(--primary-color);
-            color: #fff;
-            border: 2px solid var(--primary-color);
-        }
-
-        .btn-nav-filled:hover {
-            background-color: #1e3799;
-            border-color: #1e3799;
-        }
-
-        /* --- HERO SECTION --- */
+        /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(12, 36, 97, 0.85), rgba(12, 36, 97, 0.85)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1920') no-repeat center center/cover;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            color: white;
+            padding: 100px 5%;
             text-align: center;
-            color: #fff;
-            padding: 0 20px;
         }
-
-        .hero-content h1 {
-            font-size: 48px;
+        .hero h1 {
+            font-size: 42px;
             margin-bottom: 15px;
-            font-weight: 700;
-            letter-spacing: 1px;
+            color: #ffffff;
         }
-
-        .hero-content p {
+        .hero p {
             font-size: 18px;
             margin-bottom: 30px;
-            max-width: 600px;
+            color: #cbd5e1;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-            opacity: 0.9;
         }
-
-        .hero-btns .btn {
-            display: inline-block;
+        .btn-cta {
+            background-color: #ea580c;
+            color: white;
             padding: 12px 30px;
             text-decoration: none;
+            font-weight: bold;
             border-radius: 5px;
-            font-weight: 600;
-            margin: 10px;
-            transition: 0.3s;
+            display: inline-block;
+            transition: background 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
         }
-
-        .btn-primary {
-            background-color: var(--secondary-color);
-            color: #000;
+        .btn-cta:hover {
+            background-color: #c2410c;
         }
-
-        .btn-primary:hover {
-            background-color: #fff;
-        }
-
-        /* --- NOTICE BOARD --- */
-        .notice-bar {
-            background: #ef5350; 
-            color: #fff; 
-            padding: 10px; 
-            font-weight: 600; 
-            font-size: 14px;
-        }
-
-        /* --- FEATURES SECTION --- */
-        .features {
-            padding: 80px 5%;
+        /* Info Sections */
+        .container {
+            width: 90%;
             max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
+            margin: 50px auto;
         }
-
         .section-title {
-            font-size: 36px;
-            color: var(--primary-color);
-            margin-bottom: 50px;
+            text-align: center;
+            font-size: 28px;
+            color: #0f172a;
+            margin-bottom: 35px;
             position: relative;
+            padding-bottom: 10px;
         }
-
         .section-title::after {
             content: '';
-            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
             width: 60px;
             height: 4px;
-            background-color: var(--secondary-color);
-            margin: 10px auto 0;
+            background-color: #38bdf8;
             border-radius: 2px;
         }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            background: #fff;
-            padding: 40px 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: 0.3s;
-            border-top: 4px solid transparent;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            border-top: 4px solid var(--secondary-color);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-
-        .card i {
-            font-size: 40px;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-
-        .card h3 {
-            margin-bottom: 15px;
-            font-size: 22px;
-        }
-
-        /* --- INQUIRY SECTION --- */
-        .light-section {
-            background-color: var(--light-bg);
-            padding: 80px 5%;
-        }
-
-        .contact-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group input, .form-group textarea {
+        /* Content Layout using Table for stability */
+        .row-table {
+            display: table;
             width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            outline: none;
-            font-size: 16px;
+            table-layout: fixed;
+            border-collapse: separate;
+            border-spacing: 20px 0;
         }
+        .col-cell {
+            display: table-cell;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            vertical-align: top;
+        }
+        .col-cell h3 {
+            color: #0f172a;
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+        /* Message Section */
+        .message-box {
+            background-color: #f1f5f9;
+            border-left: 5px solid #38bdf8;
+            padding: 30px;
+            border-radius: 0 8px 8px 0;
+            margin-top: 40px;
+        }
+        .message-box em {
+            font-size: 16px;
+            color: #475569;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .message-box strong {
+            color: #0f172a;
+        }
+        /* Footer */
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            padding: 40px 5%;
+            text-align: center;
+            margin-top: 60px;
+            font-size: 14px;
+        }
+        footer p {
+            margin-bottom: 10px;
+        }
+        footer a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
 
-        .form-group input:focus, .form-group textarea:focus {
-            border-colorNormally I can help with things like this, but I don't seem to have access to that content. You can try again or ask me for something else.
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                🏫 PBRPA
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#academics">Academics</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Pt. Babu Ram Pandey Academy</h1>
+        <p>Nurturing Minds, Shaping Futures. We provide quality education with modern facilities and deep-rooted core values to build a brighter tomorrow.</p>
+        <a href="#contact" class="btn-cta">Admission Open 2026-27</a>
+    </section>
+
+    <div class="container" id="about">
+        <h2 class="section-title">Welcome To Our Academy</h2>
+        <div class="row-table">
+            <div class="col-cell">
+                <h3>Our Vision</h3>
+                <p>To be a premier center of education excellence that nurtures innovative thinkers, lifelong learners, and responsible global citizens.</p>
+            </div>
+            <div class="col-cell">
+                <h3>Our Mission</h3>
+                <p>Providing holistic education through interactive smart classrooms, robust sports infrastructure, and expert guidance for all-round development.</p>
+            </div>
+        </div>
+
+        <div class="message-box">
+            <h3>Principal's Message</h3>
+            <p><em>"Education is not just about memorizing facts, but training the mind to think logically and creatively. At Pt. Babu Ram Pandey Academy, we support every student's unique potential to shine."</em></p>
+            <strong>— Principal, PBRPA</strong>
+        </div>
+    </div>
+
+    <div class="container" id="academics">
+        <h2 class="section-title">Why Choose Us?</h2>
+        <div class="row-table">
+            <div class="col-cell">
+                <h3>🔬 Advance Labs</h3>
+                <p>Fully equipped Physics, Chemistry, Biology, and High-Tech Computer labs for rich practical learning experience.</p>
+            </div>
+            <div class="col-cell">
+                <h3>🏆 Sports & Arts</h3>
+                <p>Special training for cricket, football, basketball, along with rich music, dance, and fine arts activities.</p>
+            </div>
+            <div class="col-cell">
+                <h3>📖 Smart Library</h3>
+                <p>Thousands of books, journals, and digital learning resources available for students of all age groups.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <p><strong>Pt. Babu Ram Pandey Academy</strong></p>
+        <p>📍 Address: Main Campus, Education Hub, India | 📞 Phone: +91 98765 43210 | 📧 Email: info@pbrpacademy.com</p>
+        <p>&copy; 2026 Pt. Babu Ram Pandey Academy. All Rights Reserved. Designed for Excellence.</p>
+    </footer>
+
+</body>
+</html>
