@@ -5,178 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teacher Portal | PBRP Academy</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; }
+        
+        .btn-back { display: inline-block; padding: 10px 20px; background-color: #0f172a; color: #ffffff; text-decoration: none; font-size: 14px; font-weight: 600; border-radius: 5px; border: 1px solid #d4af37; margin-bottom: 20px; transition: all 0.3s ease; width: 100%; max-width: 420px; text-align: center; }
+        .btn-back:hover { background-color: #d4af37; color: #0f172a; }
 
-        /* Premium Login Box */
-        .login-container {
-            width: 100%;
-            max-width: 420px;
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-            border-top: 5px solid #d4af37;
-            padding: 35px;
-        }
-
-        .login-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .login-header h2 {
-            font-size: 24px;
-            color: #0f172a;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .login-header p {
-            color: #64748b;
-            font-size: 14px;
-            margin-top: 5px;
-        }
-
-        /* Status Banner for Working */
-        .status-box {
-            padding: 12px;
-            border-radius: 6px;
-            text-align: center;
-            font-weight: 700;
-            font-size: 15px;
-            margin-bottom: 20px;
-            display: none; /* Controlled by JavaScript */
-        }
-        .status-success {
-            background-color: #dcfce7;
-            color: #15803d;
-            border: 1px solid #bbf7d0;
-        }
-        .status-error {
-            background-color: #fee2e2;
-            color: #b91c1c;
-            border: 1px solid #fecaca;
-        }
-
-        /* Form Inputs */
-        .form-group {
-            margin-bottom: 20px;
-        }
-        label {
-            display: block;
-            font-size: 13px;
-            font-weight: 600;
-            color: #475569;
-            margin-bottom: 6px;
-            text-transform: uppercase;
-        }
-        input[type="tel"],
-        input[type="password"] {
-            width: 100%;
-            padding: 12px 14px;
-            border: 1px solid #cbd5e1;
-            border-radius: 6px;
-            font-size: 15px;
-            outline: none;
-            transition: all 0.3s ease;
-        }
-        input:focus {
-            border-color: #d4af37;
-            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
-        }
-
-        /* Premium Dark Button for Staff */
-        .btn-login {
-            width: 100%;
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            color: #ffffff;
-            border: 1px solid #d4af37;
-            padding: 14px;
-            font-size: 15px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-radius: 6px;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(15, 23, 42, 0.3);
-            transition: all 0.3s ease;
-            margin-top: 10px;
-        }
-        .btn-login:hover {
-            transform: translateY(-1px);
-            background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%);
-            color: #0f172a;
-        }
-
-        .footer-note {
-            text-align: center;
-            color: #94a3b8;
-            font-size: 12px;
-            margin-top: 25px;
-        }
+        .login-container { width: 100%; max-width: 420px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); overflow: hidden; border-top: 5px solid #d4af37; padding: 35px; }
+        .login-header { text-align: center; margin-bottom: 30px; }
+        .login-header h2 { font-size: 24px; color: #0f172a; font-weight: 800; text-transform: uppercase; }
+        .status-box { padding: 12px; border-radius: 6px; text-align: center; font-weight: 700; margin-bottom: 20px; display: none; }
+        .status-success { background-color: #fef3c7; color: #b45309; border: 1px solid #fde68a; }
+        .status-error { background-color: #fee2e2; color: #b91c1c; border: 1px solid #fecaca; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; font-size: 13px; font-weight: 600; color: #475569; margin-bottom: 6px; text-transform: uppercase; }
+        input[type="tel"], input[type="password"] { width: 100%; padding: 12px 14px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 15px; outline: none; }
+        .btn-login { width: 100%; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color: #ffffff; border: 1px solid #d4af37; padding: 14px; font-size: 15px; font-weight: 700; text-transform: uppercase; border-radius: 6px; cursor: pointer; margin-top: 10px; }
     </style>
 </head>
 <body>
 
+    <a href="index.html" class="btn-back">⬅ Back to Home Page</a>
+
     <div class="login-container">
-        <div class="login-header">
-            <h2>Teacher Portal</h2>
-            <p>PBRP Academy Staff Desk</p>
-        </div>
-
+        <div class="login-header"><h2>Teacher Portal</h2><p>PBRP Academy Staff Desk</p></div>
         <div id="statusBox" class="status-box"></div>
-
         <form id="loginForm" onsubmit="checkLogin(event)">
-            <div class="form-group">
-                <label for="mobile">Enter Mobile No</label>
-                <input type="tel" id="mobile" placeholder="e.g. 9876543210" required>
-            </div>
-
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" placeholder="••••••" required>
-            </div>
-
+            <div class="form-group"><label>Enter Mobile No</label><input type="tel" id="mobile" placeholder="e.g. 9876543210" required></div>
+            <div class="form-group"><label>Password</label><input type="password" id="password" placeholder="••••••" required></div>
             <button type="submit" class="btn-login">Staff Secure Login</button>
         </form>
-
-        <div class="footer-note">
-            Faculty & Administration Desk &copy; 2026
-        </div>
     </div>
 
     <script>
         function checkLogin(event) {
-            event.preventDefault(); // Page reload rokne ke liye
-
-            const mobile = document.getElementById('mobile').value;
+            event.preventDefault();
             const password = document.getElementById('password').value;
             const statusBox = document.getElementById('statusBox');
-
-            // Verification rules
             if (password === "123456") {
-                statusBox.className = "status-box status-success";
-                statusBox.innerHTML = "🟢 Working...";
+                statusBox.className = "status-box status-success"; 
+                statusBox.innerHTML = "🟡 Still Working... Coming Soon!"; 
                 statusBox.style.display = "block";
             } else {
-                statusBox.className = "status-box status-error";
-                statusBox.innerHTML = "❌ Invalid Password! Try again.";
+                statusBox.className = "status-box status-error"; 
+                statusBox.innerHTML = "❌ Invalid Password! Try again."; 
                 statusBox.style.display = "block";
             }
         }
     </script>
-
 </body>
 </html>
